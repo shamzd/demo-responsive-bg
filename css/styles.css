@@ -1,0 +1,22 @@
+/* start with the smallest background size first  */
+
+header{
+    height: 400px;
+    background-color: lightgrey;
+    /* background-image: url(../img/small-bg.webp);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;*/ 
+
+    /* background short hand: image, position, size(x &y), repeat  */
+    background: url(../img/small-bg.webp) center bottom / cover no-repeat;
+}
+
+/* as the screen gets wider the quality of the first image isnt as good swap it out for a better quality image  */
+
+/* want to change the media query at 900px so min-width is 900px  */
+@media screen and (min-width: 900px){
+    header{
+        background: url(../img/medium-bg.webp) center bottom / cover no-repeat;
+    }
+}
