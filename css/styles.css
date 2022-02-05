@@ -1,7 +1,14 @@
 /* start with the smallest background size first  */
 
+.inner-container{
+    /* this will be a fluid container until the breakpoint  */
+    /* add space so that content is not touching the edges of the viewport  */
+    padding: 2rem 1rem;
+}
+
 header{
     height: 400px;
+    
     background-color: lightgrey;
     /* background-image: url(../img/small-bg.webp);
     background-position: center bottom;
@@ -12,11 +19,35 @@ header{
     background: url(../img/small-bg.webp) center bottom / cover no-repeat;
 }
 
+main{
+    background-color: forestgreen;
+}
+
+footer{
+    background-color: yellowgreen;
+}
+
 /* as the screen gets wider the quality of the first image isnt as good swap it out for a better quality image  */
 
 /* want to change the media query at 900px so min-width is 900px  */
 @media screen and (min-width: 900px){
     header{
         background: url(../img/medium-bg.webp) center bottom / cover no-repeat;
+    }
+}
+/* bring in a fixed width container element - Don't use the body element as a container  */
+@media screen and (min-width: 1200px){
+    /* inner container now becomes a fixed width container  */
+    .inner-container{
+        width: 1160px;
+        margin: 0 auto;
+        /* padding: 2rem 1rem;  */
+    }
+}
+
+@media screen and (min-width: 1700px){
+    header{
+        height: 600px;
+        background: url(../img/large-bg.webp) center bottom / cover no-repeat;
     }
 }
